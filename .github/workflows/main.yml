@@ -10,11 +10,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v1
 
-      - name: Master
-        uses: actions/bin/filter@master
-        with:
-          args: branch master
-
       - name: Yarn install
         uses: borales/actions-yarn@v2.0.0
         with:
