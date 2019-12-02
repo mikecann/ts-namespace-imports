@@ -1,0 +1,49 @@
+{
+  "name": "ts-namespace-imports",
+  "displayName": "ts-namespace-imports",
+  "description": "Detects and adds completion for namespace like imports in Typescript",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:typescript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile",
+    "test": "node ./out/test/runTest.js",
+    "startcode": "code --disable-extensions --extensionDevelopmentPath=\"c:\\dev\\me\\experiments\\ts-namespace-imports\""
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.40.0",
+    "glob": "^7.1.5",
+    "mocha": "^6.2.2",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4",
+    "vscode-test": "^1.2.2"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/urijs": "^1.19.4",
+    "lodash": "^4.17.15",
+    "urijs": "^1.19.2"
+  }
+}
