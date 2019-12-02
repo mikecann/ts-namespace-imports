@@ -9,9 +9,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Whenever there is a change to the workspace folders refresh the cache
   // #Perf: This could be optimized if it proves to be slow but I assume it is rare
-  let workspaceWatcher = vscode.workspace.onDidChangeWorkspaceFolders(e => {
-    CompletionItemsCache.refresh();
-  });
+  let workspaceWatcher = vscode.workspace.onDidChangeWorkspaceFolders(CompletionItemsCache.refresh);
 
   // Whenever a file is added or removed refresh the cache
   // #Perf: This could be optimized
@@ -21,12 +19,9 @@ export function activate(context: vscode.ExtensionContext) {
     true,
     false
   );
-  fileSystemWatcher.onDidCreate(uri => {
-    CompletionItemsCache.refresh();
-  });
-  fileSystemWatcher.onDidDelete(uri => {
-    CompletionItemsCache.refresh();
-  });
+  
+  fileSystemWatcher.onDidCreate(CompletionItemsCache.refresh);
+  fileSystemWatcher.onDidDelete(CompletionItemsCache.refresh);
 
   let provider = vscode.languages.registerCompletionItemProvider(
     { scheme: "file", language: "typescript" },

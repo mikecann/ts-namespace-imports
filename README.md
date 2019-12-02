@@ -22,6 +22,10 @@ TS file must start with a capital letter for it to be considered for completion.
 
 ## Release Notes
 
+### 0.0.3
+
+- Now ignoring ts files found in `node_modules`
+
 ### 0.0.1
 
-Very first experimental release
+- Very first experimental release

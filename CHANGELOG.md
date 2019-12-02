@@ -1,9 +1,15 @@
 # Change Log
 
-All notable changes to the "ts-namespace-imports" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
 ## [Unreleased]
+
+## [0.0.3] - 2019-02-12
+
+### Changed
+
+- Now ignoring files found in node_modules
+
+## [0.0.1] - 2019-02-12
+
+### Added
 
 - Initial release
