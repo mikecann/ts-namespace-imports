@@ -1,8 +1,13 @@
 {
   "name": "ts-namespace-imports",
   "displayName": "ts-namespace-imports",
+  "publisher": "MikeCann",
   "description": "Detects and adds completion for namespace like imports in Typescript",
-  "version": "0.0.1",
+  "repository": {
+    "type": "GitHub",
+    "url": "https://github.com/mikecann/ts-namespace-imports"
+  },
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.40.0"
   },

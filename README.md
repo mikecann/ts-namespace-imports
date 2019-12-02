@@ -14,7 +14,7 @@ _Note: I borrowed the idea of this extension from [this extension](https://githu
 
 This extension scans your project looking for .TS files that start with a capital letter. It then offers then up in the auto-completion.
 
-\!\[main feature\]\(images/main-feature.gif\)
+![main feature](images/main-feature.gif)
 
 ## Requirements
 
